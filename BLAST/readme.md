@@ -6,6 +6,8 @@ Below there are two functions that differ slightly, both use the **NCBI API**, t
 
 ```python
 
+''' Example Usage '''
+
 str_seq = 'ATTAAAGGTTTATACCTTCCCAGG'
 seq = SQ(str_seq)
 lst_aa = seq.get_protein(min_size=1)
@@ -13,6 +15,8 @@ lst_aa = seq.get_protein(min_size=1)
 results_df = blast_query(lst_aa[0])
 
 ```
+
+<br>
 
 <code>search_sequence.py</code>
 - contains a small class <code>BLASTwww</code>
