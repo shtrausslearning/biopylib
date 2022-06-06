@@ -1,5 +1,5 @@
 Below there are two functions that differ slightly, both use the **NCBI API**, to search databases:
-- <code>blast_aav1</code> - uses <code>NCBIXML.read</code> in Biopython, **alignment alignment** can't be visualised
+- <code>blast_query.py</code> - uses <code>NCBIXML.read</code> in Biopython, **alignment alignment** can't be visualised
 - <code>search_sequence.py</code> - uses <code>SearchIO.read</code> in Biopython, which enables us to visualise the alignment
 
 <code>search_sequence.py</code>
