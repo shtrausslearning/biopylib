@@ -12,6 +12,7 @@ str_seq = 'ATTAAAGGTTTATACCTTCCCAGG'
 seq = SQ(str_seq)
 lst_aa = seq.get_protein(min_size=1)
 
+# Output DataFrame w/ BLAST results
 results_df = blast_query(lst_aa[0])
 
 ```
@@ -35,7 +36,7 @@ lst_aa                               # visualise all created amino acid chains
 
 blast_query = BLASTwww(lst_aa[0])    # Instantiate class
 blast_query.fetch()                  # BLAST query
-blast_query.view_query()             # view BLAST query results (results stored in dataframe)\
+blast_query.view_query()             # view BLAST query results, stored in DataFrame
 
 # Visualise query
 plot = blast_query.view_alignment(0) # view first alignment from results dataframe
