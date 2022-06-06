@@ -2,8 +2,8 @@ Below there are two functions that differ slightly, both use the **NCBI API**, t
 - <code>blast_aav1</code> - Uses <code>NCBIXML.read</code> in Biopython, thus don't obtain the **alignment alignment**
 - <code>search_sequence.py</code> - Uses <code>SearchIO.read</code> in Biopython, which enables us to visualise the alignment using <code>view</code>
 
-<code>search_sequende.py</code> contains a small class 
-
+<code>search_sequende.py</code>
+- contains a small class <code>BLASTwww</code>
 
 ```python
 
