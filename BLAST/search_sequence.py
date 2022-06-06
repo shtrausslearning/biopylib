@@ -1,8 +1,16 @@
 # Class to access BioPython's blastwww & plot alignments 
 class BLASTwww:
     
-    def __init__(self,seq=None,database='pdb',verbose=False,
-                 show_top=10,hit_id=0,read_xml=None,name=None):
+    # Constructor
+    def __init__(self,seq=None,        # input sequence (Seq/string)
+                      program='blastp', # BLAST program (blastn/blastp)
+                      database='pdb',  # BLAST query database
+                      verbose=False,   # write outputs
+                      show_top=10,     # maximum number of hits
+                      hit_id=0,        # show query match id #
+                      read_xml=False,   # read XML BLAST query over new query
+                      name=None):      # query identifier
+        
         self.seq = seq 
         self.database = database
         self.verbose = verbose
@@ -10,30 +18,53 @@ class BLASTwww:
         self.hit_id = hit_id
         self.read_xml = read_xml # if present -> read xml
         self.name = name  # search identifier (used for save)
+        self.program = program # blast search program
+        self.query_df = None   # dataframe that stored query data
         
+        # Colourcoding dictionary
+        self.dict_cc = {'A':'#3386FF','C':'#3386FF','D':'#B842B2','E':'#B842B2',
+                        'F':'#3386FF','G':'#FF5733','H':'#37ADBB','I':'#3386FF',
+                        'L':'#3386FF','M':'#3386FF','N':'#24CE5D','P':'#E3E710',
+                        'Q':'#24CE5D','R':'#D3385E','S':'#24CE5D','T':'#24CE5D',
+                        'V':'#3386FF','W':'#3386FF','Y':'#37ADBB','_':'white',
+                        'K':'#D3385E'}
+        
+    ''' Save BLAST search in CSV format '''
+    # read xml & convert to pandas dataframe
+    
     def save(self):
+        
         # save search xml
         sf = open(f"/kaggle/working/blast_{self.name}.xml", "w")
-        sf.write(self.result_handle.read()) 
-        self.result_handle.close()
+        sf.write(self.__result_handle.read()) 
+        self.__result_handle.close()
         sf.close() 
 
         # save metadata
         self.df.to_csv(f'/kaggle/working/csv_{self.name}.csv')
         
+    ''' Search for aminoacid chain in database '''
     # Find amino acid sequence in NCBI databases
-    def blast_aa(self):
+    # by default, program -> blastp (protein/aa chain search)
+    # To prevent multiple fetches, read xml is active & reads xml if fetched
+    # more than once
+    
+    def fetch(self):
 
-        # if not seq format
+        # Input in BioPython Sequence Format
         if(type(self.seq) is str):
             self.seq = Seq(self.seq)
         
-        if(self.read_xml is not None):
-            self.result_handle = open(f"/kaggle/working/blast_{self.name}.xml")
-            blast_qresult = SearchIO.read(self.result_handle,"blast-xml")
+        if(self.read_xml == True):
+            self.__result_handle = open(f"/kaggle/working/blast_{self.name}.xml")
+            blast_qresult = SearchIO.read(self.__result_handle,"blast-xml")
         else:
-            self.result_handle = NCBIWWW.qblast("blastp",self.database,self.seq)
-            blast_qresult = SearchIO.read(self.result_handle,"blast-xml")
+            self.__result_handle = NCBIWWW.qblast(self.program,
+                                                  self.database,
+                                                  self.seq)
+            
+            blast_qresult = SearchIO.read(self.__result_handle,"blast-xml")
+            self.read_xml = True # blast query has been saved
  
         ii=-1
         lst_id = []; lst_descr = []; lst_bitscore = []
@@ -54,7 +85,7 @@ class BLASTwww:
                     'evalue':lst_eval,'bitscore':lst_bitscore,
                     'alignment':lst_ali}
 
-        self.df = pd.DataFrame(dic_data)
+        self.__query_df = pd.DataFrame(dic_data)
 
         if(self.verbose):
 
@@ -74,32 +105,35 @@ class BLASTwww:
             print('------------------------------------------------------------')
             print(f"Alignment:\n{details.aln}")
             
-    @staticmethod
-    def get_colors(seqs):
+    def __get_colors(self,seqs):
         """make colors for bases in sequence"""
         text = [i for s in list(seqs) for i in s]
-
-        # DNA
-    #     clrs =  {'A':'red','T':'green','G':'orange','C':'blue','-':'white'}
-        # IUPAC aa
-        clrs   = {'A':'#3386FF','C':'#3386FF','D':'#B842B2','E':'#B842B2',
-                'F':'#3386FF','G':'#FF5733','H':'#37ADBB','I':'#3386FF',
-                'L':'#3386FF','M':'#3386FF','N':'#24CE5D','P':'#E3E710',
-                'Q':'#24CE5D','R':'#D3385E','S':'#24CE5D','T':'#24CE5D',
-                'V':'#3386FF','W':'#3386FF','Y':'#37ADBB','_':'white',
-                'K':'#D3385E'}
-
-        colors = [clrs[i] for i in text]
+        colors = [self.dict_cc[i] for i in text]
         return colors
+    
+    ''' Visualise BLAST query '''
+    
+    def view_query(self):
+        
+        if(self.__query_df is not None):
+            return self.__query_df
             
+    ''' View Alignment '''
     # View BLAST alignment using Bokeh
-    def view(self,aln, fontsize="9pt", plot_width=800):
-
+    
+    def view_alignment(self,aln_id,
+                  fontsize="9pt",
+                  plot_width=800):
+        
+        # Choose Alignment 
+        if(self.__query_df is not None):
+            aln_id = self.__query_df.loc[aln_id,'alignment']
+            
         #make sequence and id lists from the aln object
-        seqs = [rec.seq for rec in (aln)]
-        ids = [rec.id for rec in aln]    
+        seqs = [rec.seq for rec in (aln_id)]
+        ids = [rec.id for rec in aln_id]    
         text = [i for s in list(seqs) for i in s]
-        colors = self.get_colors(seqs)    
+        colors = self.__get_colors(seqs)    
         N = len(seqs[0])
         S = len(seqs)    
 
@@ -152,3 +186,20 @@ class BLASTwww:
         p1.yaxis.major_tick_line_width = 0
         
         return gridplot([[p],[p1]],toolbar_location='below') 
+    
+
+''' Example Usage '''
+
+# We can utlise the SQ class to get amino acid chain
+str_seq = 'ATTAAAGGTTTATACCTTC'      # Sequence in string format
+seq = SQ(str_seq)                    # define SQ class sequence
+lst_aa = seq.get_protein(min_size=1) # extract amino acid chains from via translation
+lst_aa                               # visualise all created amino acid chains
+
+blast_query = BLASTwww(lst_aa[0])    # Instantiate class
+blast_query.fetch()                  # BLAST query
+blast_query.view_query()             # view BLAST query results (results stored in dataframe)\
+
+# Visualise quary
+plot = blast_query.view_alignment(0) # view first alignment from results dataframe
+pn.pane.Bokeh(plot)
