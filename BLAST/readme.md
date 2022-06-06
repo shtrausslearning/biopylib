@@ -4,6 +4,7 @@ Below there are two functions that differ slightly, both use the **NCBI API**, t
 
 <code>search_sequende.py</code>
 - contains a small class <code>BLASTwww</code>
+- class inputs require sequences in biopython <code>Seq</code> or string formats
 
 ```python
 
@@ -19,7 +20,7 @@ blast_query = BLASTwww(lst_aa[0])    # Instantiate class
 blast_query.fetch()                  # BLAST query
 blast_query.view_query()             # view BLAST query results (results stored in dataframe)\
 
-# Visualise quary
+# Visualise query
 plot = blast_query.view_alignment(0) # view first alignment from results dataframe
 pn.pane.Bokeh(plot)
 
