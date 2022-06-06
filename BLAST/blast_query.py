@@ -6,8 +6,11 @@ import re
 import pandas as pd
 
 # Search NCBI BLAST Query
-def blast_query(seq,program="blastp",database='blastp',
-               verbose=False,n_top=5):
+def blast_query(seq,               # Input sequence/string
+                program="blastp",  # BLAST program
+                database='pdb',    # search in databse
+                verbose=False,     # verbally output resuts
+                n_top=5):          # show only a few results
     
     # if input is a string
     if(type(seq) is str):
