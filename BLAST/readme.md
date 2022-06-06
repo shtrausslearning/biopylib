@@ -4,6 +4,16 @@ Below there are two functions that differ slightly, both use the **NCBI API**, t
 - contains a small function <code>blast_query</code>
 - <code>NCBIXML.read</code> in Biopython
 
+```python
+
+str_seq = 'ATTAAAGGTTTATACCTTCCCAGG'
+seq = SQ(str_seq)
+lst_aa = seq.get_protein(min_size=1)
+
+results_df = blast_query(lst_aa[0])
+
+```
+
 <code>search_sequence.py</code>
 - contains a small class <code>BLASTwww</code>
 - uses <code>SearchIO.read</code> in Biopython
