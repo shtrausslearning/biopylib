@@ -22,7 +22,7 @@ results_df = blast_query(lst_aa[0])
 <code>search_sequence.py</code>
 - contains a small class <code>BLASTwww</code>
 - uses <code>SearchIO.read</code> in Biopython
-- class inputs require sequences in biopython <code>Seq</code> or string formats
+- class inputs require sequences in biopython <code>Seq</code> or <code>string</code> formats
 
 ```python
 
