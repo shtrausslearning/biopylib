@@ -2,7 +2,7 @@ Below there are two functions that differ slightly, both use the **NCBI API**, t
 - <code>blast_aav1</code> - Uses <code>NCBIXML.read</code> in Biopython, thus don't obtain the **alignment alignment**
 - <code>search_sequence.py</code> - Uses <code>SearchIO.read</code> in Biopython, which enables us to visualise the alignment using <code>view</code>
 
-’’’python
+```python
 
 ''' Example Usage '''
 
@@ -20,4 +20,4 @@ blast_query.view_query()             # view BLAST query results (results stored 
 plot = blast_query.view_alignment(0) # view first alignment from results dataframe
 pn.pane.Bokeh(plot)
 
-’’’
+```
