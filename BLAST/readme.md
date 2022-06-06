@@ -1,9 +1,12 @@
 Below there are two functions that differ slightly, both use the **NCBI API**, to search databases:
-- <code>blast_query.py</code> - uses <code>NCBIXML.read</code> in Biopython, **alignment alignment** can't be visualised
-- <code>search_sequence.py</code> - uses <code>SearchIO.read</code> in Biopython, which enables us to visualise the alignment
+
+<code>blast_query.py</code>
+- contains a small function <code>blast_query</code>
+- <code>NCBIXML.read</code> in Biopython
 
 <code>search_sequence.py</code>
 - contains a small class <code>BLASTwww</code>
+- uses <code>SearchIO.read</code> in Biopython
 - class inputs require sequences in biopython <code>Seq</code> or string formats
 
 ```python
