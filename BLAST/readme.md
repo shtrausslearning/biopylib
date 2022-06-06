@@ -4,7 +4,7 @@
 
 <code>blast_query.py</code>
 - contains a small function <code>blast_query</code>
-- <code>NCBIXML.read</code> in Biopython
+- uses <code>NCBIXML.read</code> in Biopython
 - class inputs require sequences in biopython <code>Seq</code> or <code>string</code> formats
 
 ```python
