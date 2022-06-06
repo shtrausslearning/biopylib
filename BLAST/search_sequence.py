@@ -43,8 +43,7 @@ class BLASTwww:
         # save metadata
         self.df.to_csv(f'/kaggle/working/csv_{self.name}.csv')
         
-    ''' Search for aminoacid chain in database '''
-    # Find amino acid sequence in NCBI databases
+    ''' Search for sequence in database '''
     # by default, program -> blastp (protein/aa chain search)
     # To prevent multiple fetches, read xml is active & reads xml if fetched
     # more than once
@@ -112,9 +111,9 @@ class BLASTwww:
         return colors
     
     ''' Visualise BLAST query '''
+    # After fetch() method, we can visualise the results in df 
     
     def view_query(self):
-        
         if(self.__query_df is not None):
             return self.__query_df
             
@@ -122,8 +121,8 @@ class BLASTwww:
     # View BLAST alignment using Bokeh
     
     def view_alignment(self,aln_id,
-                  fontsize="9pt",
-                  plot_width=800):
+                            fontsize="9pt",
+                            plot_width=800):
         
         # Choose Alignment 
         if(self.__query_df is not None):
