@@ -1,4 +1,4 @@
-### Searching for similar sequence in a Database
+## Searching for similar sequence in a Database
 - Below is a function & class that differ slightly, both use the **NCBI API**
 - Both by default use BLAST program <code>blastp</code> & seach in database <code>pdb</code>
 
