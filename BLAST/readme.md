@@ -24,45 +24,19 @@ results_df = blast_query(lst_aa[0])
 
 ```
 
-           ID ACCESSION                                         DEFINITION  \
-0         ---       ---                                                ---   
-0  pdb|6LO8|E    6LO8_E  Cryo-EM structure of the TIM22 complex from ye...   
-1  pdb|3DXR|A    3DXR_A  Crystal structure of the yeast inter-membrane ...   
-2  pdb|2BSK|A    2BSK_A  Crystal structure of the TIM9 Tim10 hexameric ...   
-3  pdb|7CGP|J    7CGP_J  Cryo-EM structure of the human mitochondrial t...   
-4  pdb|3DXR|B    3DXR_B  Crystal structure of the yeast inter-membrane ...   
+<style scoped>
+table {
+  font-size: 13px;
+}
+</style>
 
-  ALI LENGTH HSP NUMER   e-VALUE  SCORE LENGTH IDENTITIES  \
-0        ---       ---       ---    ---    ---        ---   
-0         87         1       0.0  131.0     57         24   
-1         89         1       0.0  130.0     57         24   
-2         89         1       0.0  127.0     57         19   
-3        103         1  0.000006   95.0     50         16   
-4         95         1  0.000784   80.0     37         15   
-
-                                           SEQ-QUERY  \
-0                                                ---   
-0  QMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVG...   
-1  QMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVG...   
-2  QMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVG...   
-3  MRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGY...   
-4              YNNMVNRCFATCIR-SFQEKKVNAEEMDCTKRCVTKF   
-
-                                           SEQ-MATCH  \
-0                                                ---   
-0  QM+D M  Y+N+V RCF  C+  F   K+  +E  C  +C  KF+ ...   
-1  QM+D M  Y+N+V RCF  C+  F   K+  +E  C  +C  KF+ ...   
-2  Q ++ + TYN +   CF  C++ F  ++V  EE  C++ C+ K++ ...   
-3  +RD +  YN M   CF  C+ S   + ++AEE  C   C  K +  ...   
-4              +N +VN C+  CI  S+ E ++N  E  C  RCV K+   
-
-                                         SEQ-SUBJECT  
-0                                                ---  
-0  QMKDFMRLYSNLVERCFTDCVNDFTTSKLTNKEQTCIMKCSEKFLK...  
-1  QMKDFMRLYSNLVERCFTDCVNDFTTSKLTNKEQTCIMKCSEKFLK...  
-2  QFKEFLGTYNKLTETCFLDCVKDFTTREVKPEETTCSEHCLQKYLK...  
-3  LRDFLLVYNRMTELCFQRCVPSLHHRALDAEEEACLHSCAGKLIHS...  
-4              FNKLVNNCYKKCINTSYSEGELNKNESSCLDRCVAKY  
+|  ID         | ACCESSION   | DEFINITION                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |   ALI LENGTH |   HSP NUMER |     e-VALUE |   SCORE |   LENGTH |   IDENTITIES | SEQ-QUERY                                                 | SEQ-MATCH                                                 | SEQ-SUBJECT                                               |
+| :-----------|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------:|------------:|------------:|--------:|---------:|-------------:|:----------------------------------------------------------|:----------------------------------------------------------|:----------------------------------------------------------|
+|  pdb|6LO8|E | 6LO8_E      | Cryo-EM structure of the TIM22 complex from yeast [Saccharomyces cerevisiae S288C] >pdb|6LO8|G Cryo-EM structure of the TIM22 complex from yeast [Saccharomyces cerevisiae S288C] >pdb|6LO8|I Cryo-EM structure of the TIM22 complex from yeast [Saccharomyces cerevisiae S288C]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |           87 |           1 | 1.50081e-11 |     131 |       57 |           24 | QMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGYSQRVALRFAE | QM+D M  Y+N+V RCF  C+  F   K+  +E  C  +C  KF+ +S+RV  RF E | QMKDFMRLYSNLVERCFTDCVNDFTTSKLTNKEQTCIMKCSEKFLKHSERVGQRFQE |
+|  pdb|3DXR|A | 3DXR_A      | Crystal structure of the yeast inter-membrane space chaperone assembly TIM9.10 [Saccharomyces cerevisiae]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |           89 |           1 | 1.6426e-11  |     130 |       57 |           24 | QMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGYSQRVALRFAE | QM+D M  Y+N+V RCF  C+  F   K+  +E  C  +C  KF+ +S+RV  RF E | QMKDFMRLYSNLVERCFTDCVNDFTTSKLTNKEQTCIMKCSEKFLKHSERVGQRFQE |
+|  pdb|2BSK|A | 2BSK_A      | Crystal structure of the TIM9 Tim10 hexameric complex [Homo sapiens] >pdb|2BSK|C Crystal structure of the TIM9 Tim10 hexameric complex [Homo sapiens] >pdb|2BSK|E Crystal structure of the TIM9 Tim10 hexameric complex [Homo sapiens] >pdb|7CGP|D Cryo-EM structure of the human mitochondrial translocase TIM22 complex at 3.7 angstrom. [Homo sapiens] >pdb|7CGP|E Cryo-EM structure of the human mitochondrial translocase TIM22 complex at 3.7 angstrom. [Homo sapiens] >pdb|7CGP|F Cryo-EM structure of the human mitochondrial translocase TIM22 complex at 3.7 angstrom. [Homo sapiens] >pdb|7CGP|K Cryo-EM structure of the human mitochondrial translocase TIM22 complex at 3.7 angstrom. [Homo sapiens] >pdb|7CGP|L Cryo-EM structure of the human mitochondrial translocase TIM22 complex at 3.7 angstrom. [Homo sapiens] |           89 |           1 | 4.83462e-11 |     127 |       57 |           19 | QMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGYSQRVALRFAE | Q ++ + TYN +   CF  C++ F  ++V  EE  C++ C+ K++  +QR+++RF E | QFKEFLGTYNKLTETCFLDCVKDFTTREVKPEETTCSEHCLQKYLKMTQRISMRFQE |
+|  pdb|7CGP|J | 7CGP_J      | Cryo-EM structure of the human mitochondrial translocase TIM22 complex at 3.7 angstrom. [Homo sapiens]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |          103 |           1 | 5.58706e-06 |      95 |       50 |           16 | MRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGYSQRV        | +RD +  YN M   CF  C+ S   + ++AEE  C   C  K +  + R+        | LRDFLLVYNRMTELCFQRCVPSLHHRALDAEEEACLHSCAGKLIHSNHRL        |
+|  pdb|3DXR|B | 3DXR_B      | Crystal structure of the yeast inter-membrane space chaperone assembly TIM9.10 [Saccharomyces cerevisiae]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |           95 |           1 | 0.000783618 |      80 |       37 |           15 | YNNMVNRCFATCIR-SFQEKKVNAEEMDCTKRCVTKF                     | +N +VN C+  CI  S+ E ++N  E  C  RCV K+                     | FNKLVNNCYKKCINTSYSEGELNKNESSCLDRCVAKY                     | 
 
 <br>
 
