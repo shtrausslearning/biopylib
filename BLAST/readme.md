@@ -1,6 +1,8 @@
 ## Searching for similar sequence in a Database
 
-We can utilise <code>BLAST</code> to find the sequence or its subset in a databse & subsequently identify it, if found.
+We can utilise <code>BLAST</code> to find the <code>sequence</code> or its subset in a databse & subsequently identify it, if found.
+
+
 What we need:
 
 - If we have a nucleotide sequence (eg. ATTAAAGGTTTATACCTTCCCAGG)
