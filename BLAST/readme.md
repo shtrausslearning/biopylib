@@ -37,6 +37,8 @@ results_df = blast_query(lst_aa[0])
 - contains a small class <code>BLASTwww</code>
 - uses <code>SearchIO.read</code> in Biopython
 - class inputs require sequences in biopython <code>Seq</code> or <code>string</code> formats
+- Result dataframe viewable via <code>view_query</code> method, contains an <code>alignment</code> column
+- This is useful, as we can visualise it via <code>view_alignment</code> method
 
 ```python
 
