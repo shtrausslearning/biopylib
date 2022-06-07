@@ -1,7 +1,12 @@
 ## Searching for similar sequence in a Database
 
-- If we have a <code>biological sequence</code> (eg. ATTAAAGGTTTATACCTTCCCAGG)
+We can utilise <code>BLAST</code> to find the sequence or its subset in a databse & subsequently identify it, if found.
+What we need:
 
+- If we have a nucleotide sequence (eg. ATTAAAGGTTTATACCTTCCCAGG)
+- Or an amino acid chain sequence (eg. HWLQMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGYSQRVALRFAE)
+
+We can utilise the <code>NCBI API</code>, via <code>BioPython</code>
 
 - Below is a function & class that differ slightly, both use the **NCBI API**
 - Both by default use BLAST program <code>blastp</code> & seach in database <code>pdb</code>
