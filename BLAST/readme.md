@@ -5,8 +5,8 @@ We can utilise <code>BLAST</code> to find the <code>sequence</code> or its subse
 
 What we need:
 
-- If we have a nucleotide sequence (eg. ATTAAAGGTTTATACCTTCCCAGG)
-- Or an amino acid chain sequence (eg. HWLQMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGYSQRVALRFAE)
+- If we have a <code>nucleotide</code> sequence (eg. ATTAAAGGTTTATACCTTCCCAGG)
+- Or an <code>amino acid</code> chain sequence (eg. HWLQMRDSMNTYNNMVNRCFATCIRSFQEKKVNAEEMDCTKRCVTKFVGYSQRVALRFAE)
 
 We can utilise the <code>NCBI API</code>, via <code>BioPython</code>
 
