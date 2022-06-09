@@ -1,6 +1,6 @@
 ![](https://i.imgur.com/x1chlWl.png)
 
-## biopylab module aim:
+## module aim:
 The aim of the <code>biopylab</code> module is to simplify the required input required from the user end when conducting various biological analysis
 
 **Folder** Contents:
