@@ -1,4 +1,4 @@
-# bioinformatics
+# biopylab
 <code>py</code> scripts and <code>ipynb</code> notebooks about **bioinformatics**
 
 Folder Contents:
