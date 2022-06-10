@@ -6,8 +6,8 @@
 ### **module aim**
 The aim of the <code>biopylab</code> module is to simplify the required input from the user end when conducting various biological analysis
 
-### **kaggle** dataset
-**<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
+### code version
+**<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>** **(0.0.5)** **[<code>pip</code>](https://pypi.org/project/biopylib/)**
 
 ### **src** contents:
 - <code>blast</code> - BLAST sequence query operations
