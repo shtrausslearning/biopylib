@@ -7,8 +7,8 @@ The aim of the <code>biopylab</code> module is to simplify the required input fr
 kaggle dataset: **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
 
 **Folder** Contents:
-- <code>blast</code> - BLAST query functions/classes via <code>biopython</code>, with some extra added methods/functions
-- <code>read_sequence</code> - Read Biological Sequence File Formats
-- <code>sequence</code> - Biological Sequence Operations
-- <code>sequence_alignment</code> - Biological Sequence Alignment Operations
-- <code>sce</code> - Single Cell Experiment Analysis
+- <code>blast</code> - BLAST sequence query operations
+- <code>read_sequence</code> - Read biological sequence file formats
+- <code>sequence</code> - Biological sequence operations
+- <code>sequence_alignment</code> - Biological sequence alignment operations
+- <code>sce</code> - Single Cell Experiment Analysis (SCE) operations
