@@ -11,3 +11,4 @@ kaggle dataset: **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearn
 - <code>read_sequence</code> - Read Biological Sequence File Formats
 - <code>sequence</code> - Biological Sequence Operations
 - <code>sequence_alignment</code> - Biological Sequence Alignment Operations
+- <code>sce</code> - Single Cell Experiment Analysis
