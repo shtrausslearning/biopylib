@@ -6,10 +6,10 @@
 ### **module aim**
 The aim of the <code>biopylab</code> module is to simplify the required input from the user end when conducting various biological analysis
 
-### Kaggle Dataset: 
+### Kaggle version: 
 **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
 
-### code version
+### pypi version
 [![PyPI version](https://badge.fury.io/py/biopylib.svg)](https://badge.fury.io/py/biopylib)
 
 ### **src** contents:
