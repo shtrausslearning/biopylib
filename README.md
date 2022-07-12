@@ -6,8 +6,10 @@
 ### **module aim**
 The aim of the <code>biopylab</code> module is to simplify the required input from the user end when conducting various biological analysis
 
+### Kaggle Dataset: **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
+
 ### code version
-**<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>** **(0.0.5)** **[<code>pip</code>](https://pypi.org/project/biopylib/)** [![PyPI version](https://badge.fury.io/py/biopylib.svg)](https://badge.fury.io/py/biopylib)
+**[<code>pip</code>](https://pypi.org/project/biopylib/)** [![PyPI version](https://badge.fury.io/py/biopylib.svg)](https://badge.fury.io/py/biopylib)
 
 ### **src** contents:
 - <code>blast</code> - BLAST sequence query operations
@@ -15,3 +17,4 @@ The aim of the <code>biopylab</code> module is to simplify the required input fr
 - <code>sequence</code> - Biological sequence operations
 - <code>sequence_alignment</code> - Biological sequence alignment operations
 - <code>sce</code> - Single Cell Experiment Analysis (SCE) operations
+- <code>dmotif</code> - Deterministic Motif Discovery
