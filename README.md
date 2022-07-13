@@ -27,3 +27,16 @@
 
 #### **forkable testing notebook:**
 - **[biopylib playground](https://www.kaggle.com/code/shtrausslearning/biopylib-playground)**
+
+#### **Prepare whl file using:**
+
+python setup.py bdist_wheel --universal
+
+#### **Install in notebook via:**
+
+!pip install /path/
+
+#### **Upload to pip:**
+
+!pip install twine
+twine upload biopylib-0.0.5-py2.py3-none-any.whl
