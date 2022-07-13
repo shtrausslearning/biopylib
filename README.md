@@ -7,12 +7,16 @@
 - Minimise/remove the need for coding that required from the user end for a specific biological analysis process
 - This is achieved by interpreting & analysing the input (**desired series of operations**) using **NPL** methods
 
-### Change Log:
+#### Change Log:
 - <code>0.0.8</code> : Added **Deterministic Motif Discovery** Classes
 - <code>0.0.7</code> : Added **GenBank** reader
 
+### Versions:
+
+#### github version: **0.0.8**
+
 #### Kaggle version: 
-- **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
+- **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>** **0.0.7**
 
 #### pypi version
 [![PyPI version](https://badge.fury.io/py/biopylib.svg)](https://badge.fury.io/py/biopylib)
