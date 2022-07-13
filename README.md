@@ -19,11 +19,11 @@
 
 #### **src** contents:
 - <code>blast</code> - BLAST sequence query operations
-- <code>read_sequence</code> - Read biological sequence file formats
+- <code>read_sequence</code> - Biological sequence file read/write operations
 - <code>sequence</code> - Biological sequence operations
 - <code>sequence_alignment</code> - Biological sequence alignment operations
 - <code>sce</code> - Single Cell Experiment Analysis (SCE) operations
-- <code>dmotif</code> - Deterministic Motif Discovery
+- <code>motif</code> - Deterministic & Probabilistic Motif Discovery operations
 
 #### **forkable testing notebook:**
 - **[biopylib playground](https://www.kaggle.com/code/shtrausslearning/biopylib-playground)**
