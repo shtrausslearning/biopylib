@@ -12,7 +12,7 @@
 - <code>0.0.6</code> : Added **GenBank** reader
 
 #### Kaggle version: 
-**<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
+- **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
 
 #### pypi version
 [![PyPI version](https://badge.fury.io/py/biopylib.svg)](https://badge.fury.io/py/biopylib)
@@ -24,3 +24,6 @@
 - <code>sequence_alignment</code> - Biological sequence alignment operations
 - <code>sce</code> - Single Cell Experiment Analysis (SCE) operations
 - <code>dmotif</code> - Deterministic Motif Discovery
+
+#### **forkable testing notebook:**
+- **[biopylib playground](https://www.kaggle.com/code/shtrausslearning/biopylib-playground)**
