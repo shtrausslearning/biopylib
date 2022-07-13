@@ -7,9 +7,9 @@
 - <code>0.0.7</code> : Added **Deterministic Motif Discovery** Classes
 - <code>0.0.6</code> : Added **GenBank** reader
 
-#### **module aim**
-- The aim of the <code>biopylab</code> module is to minimise/remove the need for coding that required for a specific biological analysis process
-- This is achieved by analysing the input (**desired series of operations**) using **NPL** methods
+#### **This package aims to:**
+- Minimise/remove the need for coding that required from the user end for a specific biological analysis process
+- This is achieved by interpreting & analysing the input (**desired series of operations**) using **NPL** methods
 
 #### Kaggle version: 
 **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
