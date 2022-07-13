@@ -8,7 +8,8 @@
 - <code>0.0.6</code> : Added **GenBank** reader
 
 #### **module aim**
-- The aim of the <code>biopylab</code> module is to minimise/remove the need for coding that required for a specific biological analysis process, this is achieved by analysing the input of the desired operation by NPL
+- The aim of the <code>biopylab</code> module is to minimise/remove the need for coding that required for a specific biological analysis process
+- This is achieved by analysing the input (**desired series of operations**) using **NPL** methods
 
 #### Kaggle version: 
 **<code>[biopyseq](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>**
