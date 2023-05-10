@@ -6,8 +6,8 @@
 - The project is currently at a stage where the bio modules are being added
 
 ### **This package aims to:**
-- Minimise/remove the need for coding that required from the users end for a specific biological analysis process
-- This is achieved by interpreting & analysing the input (**desired series of operations**) using **NPL** methods
+- Minimise/remove the need for required coding from the users end
+- This is achieved by interpreting & analysing the input (**desired series of operations**) using **NLP** methods
 
 ### Brief change Log:
 - <code>0.0.9</code> : Added **Single Cell Experiment** Class
