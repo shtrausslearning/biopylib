@@ -22,6 +22,8 @@
 
 #### **src** contents:
 
+biopylib
+
 - <code>blast</code> - BLAST sequence query operations
 - <code>read_sequence</code> - Biological sequence file read/write operations
 - <code>sequence</code> - Biological sequence operations
@@ -29,9 +31,16 @@
 - <code>sce</code> - Single Cell Experiment Analysis (SCE) operations
 - <code>motif</code> - Deterministic & Probabilistic Motif Discovery operations
 
-#### **forkable testing notebook:**
+#### **biopylib notebooks:**
+
+You can fork and test the latest version on Kaggle:
 
 - **[biopylib playground](https://www.kaggle.com/code/shtrausslearning/biopylib-playground)**
+
+Notebooks relating to **biopylib**:
+
+- **[Biological Sequence Operations](https://www.kaggle.com/code/shtrausslearning/biological-sequence-operations)** (operations usising **blast**, **read_sequence**, **sequence** classes)
+- **[Biological Sequence Alignment](https://www.kaggle.com/code/shtrausslearning/biological-sequence-alignment)** (operations using **read_sequence**, **sequence_alignment** classes)
 
 #### **Prepare whl file using:**
 
