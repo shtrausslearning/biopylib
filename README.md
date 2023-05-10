@@ -10,6 +10,7 @@
 - This is achieved by interpreting & analysing the input (**desired series of operations**) using **NPL** methods
 
 ### Brief change Log:
+- <code>0.0.9</code> : Added **Single Cell Experiment** Class
 - <code>0.0.8</code> : Added **Deterministic Motif Discovery** Classes
 - <code>0.0.7</code> : Added **GenBank** reader
 
