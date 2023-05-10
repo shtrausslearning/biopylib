@@ -37,9 +37,9 @@ You can fork and test the latest versions:
 
 | Notebook | Description |
 | - | - |
-| **[biopylib playground](https://www.kaggle.com/code/shtrausslearning/biopylib-playground)** | Main Testing Notebook |
-| **[Biological Sequence Operations](https://www.kaggle.com/code/shtrausslearning/biological-sequence-operations)** | Operations usising **blast**, **read_sequence**, **sequence** classes |
-| **[Biological Sequence Alignment](https://www.kaggle.com/code/shtrausslearning/biological-sequence-alignment)** | Operations using **read_sequence**, **sequence_alignment** classes) |
+| **<code>[biopylib playground](https://www.kaggle.com/code/shtrausslearning/biopylib-playground)</code>** | Main Testing Notebook |
+| **<code>[Biological Sequence Operations](https://www.kaggle.com/code/shtrausslearning/biological-sequence-operations)</code>** | Operations usising **blast**, **read_sequence**, **sequence** classes |
+| **<code>[Biological Sequence Alignment](https://www.kaggle.com/code/shtrausslearning/biological-sequence-alignment)</code>** | Operations using **read_sequence**, **sequence_alignment** classes) |
 
 ### Package Related Operations:
 
