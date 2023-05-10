@@ -15,20 +15,20 @@
 
 #### Versions
 
-| **Kaggle** | **Github** | PyPI
+| **Kaggle** | **Github** | **PyPI**
 | - | - | - |
 | **<code>[biopylib](https://www.kaggle.com/datasets/shtrausslearning/biopylib)</code>** **0.0.8** | **<code>[biopylib](https://github.com/shtrausslearning/biopylib)</code>** **0.0.8** | [![PyPI version](https://badge.fury.io/py/biopylib.svg)](https://badge.fury.io/py/biopylib) | 
 
 #### **src** contents:
 
-biopylib
-
-- <code>blast</code> - BLAST sequence query operations
-- <code>read_sequence</code> - Biological sequence file read/write operations
-- <code>sequence</code> - Biological sequence operations
-- <code>sequence_alignment</code> - Biological sequence alignment operations
-- <code>sce</code> - Single Cell Experiment Analysis (SCE) operations
-- <code>motif</code> - Deterministic & Probabilistic Motif Discovery operations
+|**biopylib package file** | **description** |
+|-|-|
+| <code>blast</code> | BLAST sequence query operations |
+| <code>read_sequence</code> | Biological sequence file read/write operations |
+| <code>sequence</code> | Biological sequence operations |
+| <code>sequence_alignment</code> | Biological sequence alignment operations |
+| <code>sce</code> | Single Cell Experiment Analysis (SCE) operations |
+| <code>motif</code> | Deterministic & Probabilistic Motif Discovery operations |
 
 #### **biopylib notebooks:**
 
