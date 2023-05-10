@@ -22,12 +22,12 @@
 #### **src** contents:
 
 |**biopylib package file** | **description** |
-|-|-|
+|-:|-|
 | <code>blast</code> | BLAST sequence query operations |
 | <code>read_sequence</code> | Biological sequence file read/write operations |
 | <code>sequence</code> | Biological sequence operations |
 | <code>sequence_alignment</code> | Biological sequence alignment operations |
-| <code>sce</code> | Single Cell Experiment Analysis (SCE) operations |
+| <code>sce</code> | Single Cell Experiment Analysis (SCE) operations (v0.09) |
 | <code>motif</code> | Deterministic & Probabilistic Motif Discovery operations |
 
 #### **biopylib notebooks:**
